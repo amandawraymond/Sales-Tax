@@ -8,6 +8,7 @@ class ShoppingCart
     print_items
     print_sales_tax
     print_grand_total
+    print_new_line
   end  
 
   private
@@ -23,15 +24,20 @@ class ShoppingCart
       puts item_info(item)
     end
 
-    # Depending on desired output of receipt could consider to print * quantity instead of price
+    # Depending on desired output of receipt could replace #{price} with price_and_quantity = display_two_decimals(item.price_with_tax * quantity) 
     def item_info(item)
       quantity = quantity_count(item)
       price = display_two_decimals(item.price_with_tax)
       "#{quantity} #{item.name}: #{price}"
     end
 
+    # separated "puts" from code to be tested
     def print_sales_tax
-      puts "Sales Tax: #{display_two_decimals(sales_tax)}"
+       puts sales_tax_info
+    end
+
+    def sales_tax_info
+      "Sales Tax: #{display_two_decimals(sales_tax)}"
     end
 
     def sales_tax
@@ -39,19 +45,27 @@ class ShoppingCart
     end
 
     def print_grand_total
-      puts "Total: #{display_two_decimals(grand_total)}"
+      puts grand_total_info
+    end
+
+    def grand_total_info
+      "Total: #{display_two_decimals(grand_total)}"
     end
 
     def grand_total
       @items.reduce(0) { |memo, item| memo + item.price_with_tax }
+    end
+
+    def quantity_count(item)
+      @items.count(item) 
     end
     
     def display_two_decimals(number)
       sprintf "%.2f", number      
     end
 
-    def quantity_count(item)
-      @items.count(item) 
+    def print_new_line
+      puts "\n"
     end
 
 end
