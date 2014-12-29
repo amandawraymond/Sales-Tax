@@ -1,4 +1,5 @@
 require './item'
+require './item_decorator'
 require './item_food'
 require './item_medical'
 require './item_book'
@@ -65,4 +66,5 @@ my_cart3.print_receipt
 # end
 
 # do rspec suite
+# Another way this could be improved is set defaults + using super classes.
 

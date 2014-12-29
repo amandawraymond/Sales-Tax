@@ -3,10 +3,7 @@ class Item
 
   def initialize(args)
     @name      = args[:name]
-    @price     = args[:price]
-    @exempt    = exempt?
-    @imported  = imported? 
-    @taxation  = taxation 
+    @price     = args[:price]    
   end
 
   def taxation
@@ -32,14 +29,6 @@ class Item
 
   private
 
-    def exempt?
-      exempted_categories = ["food","medical","book"]
-      exempted_categories.include?(@category)     
-    end
-
-    def imported?
-      @name.include?("imported")
-    end
 
     # TODO: monkey-patch function into Number class 
     def round_up(number)
@@ -47,7 +36,7 @@ class Item
     end
 end
 
-# Another way this could be improved is set defaults + using super classes.
+
 
 
 

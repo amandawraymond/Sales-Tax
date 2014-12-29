@@ -1,4 +1,4 @@
-class Book < Item
+class Book < ItemDecorator
   def initialize(args)
     @category = "book"
     super(args)

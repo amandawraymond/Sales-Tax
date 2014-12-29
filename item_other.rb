@@ -1,4 +1,4 @@
-class Other < Item
+class Other < ItemDecorator
   def initialize(args)
     @category = "other"
     super(args)
