@@ -1,14 +1,18 @@
-class Order
-  
+class Receipt
   def initialize(items)
     @ordered_items = items
+    print_receipt
   end
 
   def print_receipt
+    print_new_line
+    print_title 
+    print_dashed_line #visible line separation
     print_items
+    print_dashed_line
     print_sales_tax
     print_grand_total
-    print_new_line  #show multiple examples separated by a line
+    print_new_line  #line separation between multiple orders 
   end  
 
   private
@@ -66,6 +70,14 @@ class Order
 
     def print_new_line
       puts "\n"
+    end
+
+    def print_title
+      puts "ThoughtWorks Receipt:"
+    end
+
+    def print_dashed_line
+      puts "--------------------"
     end
 
 end

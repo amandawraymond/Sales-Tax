@@ -3,7 +3,6 @@ class ItemDecorator < Item
     super(args)
     @exempt    = exempt?
     @imported  = imported? 
-    @taxation  = taxation
   end
 
   private
