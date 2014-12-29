@@ -10,14 +10,6 @@ class Item
     orgin_tax.to_f + item_category_tax.to_f
   end
 
-  def item_category_tax
-    0.10 unless @exempt
-  end
-
-  def orgin_tax
-    0.05 if @imported
-  end
-
   def applicable_tax
     applicable_tax = @price * @taxation
     round_up(applicable_tax)
@@ -29,8 +21,15 @@ class Item
 
   private
 
+    def item_category_tax
+      0.10 unless @exempt
+    end
 
-    # TODO: monkey-patch function into Number class 
+    def orgin_tax
+      0.05 if @imported
+    end
+
+    # improvement: could monkey-patch function into Number class 
     def round_up(number)
       (number * 20).ceil / 20.0
     end

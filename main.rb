@@ -36,10 +36,6 @@ my_cart2.print_receipt
 my_cart3 = Order.new(input3)
 my_cart3.print_receipt
 
-# input4 = [chocolate_bar, chocolate_bar, music, perfume_sml]
-# my_cart4 = ShoppingCart.new(input4)
-# my_cart4.print_receipt
-
 # Assumptions: 
 # 1. Desired format of receipt to be
 #   #{quantity} #{item description} : #{price + tax}
@@ -49,21 +45,6 @@ my_cart3.print_receipt
 # 3. "imported" would always be in the description of an imported item
 # 4. When you order more than one kind of item, it is scanned and counted separately
 
-
-
-
-# send in ruby 
-# send version one
-# then
-# send gold-plate version with Food class etc better structured defaults where they should be 
-
-# class Food < Item
-#   initialize
-#   always do args
-#     always super()
-#   end
-# over-write applicaable tax
-# end
 
 # do rspec suite
 # Another way this could be improved is set defaults + using super classes.
