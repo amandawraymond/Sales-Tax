@@ -1,6 +1,7 @@
 class Book < Item
   def initialize(args)
+    @category = "book"
     super(args)
-    @exempt = true
   end
+
 end

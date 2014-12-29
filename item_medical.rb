@@ -1,6 +1,7 @@
 class Medical < Item
   def initialize(args)
+    @category = "medical"
     super(args)
-    @exempt = true
   end
+
 end

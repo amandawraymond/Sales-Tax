@@ -1,21 +1,19 @@
-require 'pry'
-require './item'
-class ExemptItem #Child Decorator Aggregate
-  attr_accessor :item
-  def initialize(item)
-    @item = item
+
+class ItemDecorator < Item
+  def initialize(args)
+    super(args)
+    @exempt = exempt?
+    @imported = imported?
   end
 
-  def tax
-    @price * 0
-  end
+  private
 
-  def price
-    @price + @item.tax
-  end
+    def exempt?
+      if Book || Food || Medical 
+    end
 
-  def to_s
-    "#{@description[0..-2].join(" ")}: #{price}"
-  end
+    def imported?
+      @name.include?("imported")
+    end
 
 end

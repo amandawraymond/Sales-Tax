@@ -1,9 +1,7 @@
 class Food < Item
   def initialize(args)
+    @category = "food"
     super(args)
-    @exempt = true
   end
-
-  
 
 end

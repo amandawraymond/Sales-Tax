@@ -1,6 +1,6 @@
-class Cosmetic < Item
+class Other < Item
   def initialize(args)
-    @category = "cosmetic"
+    @category = "other"
     super(args)
   end
 

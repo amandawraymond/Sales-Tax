@@ -4,7 +4,8 @@ require './item_medical'
 require './item_book'
 require './item_cosmetic'
 require './item_media'
-require './shopping_cart'
+require './item_other'
+require './order'
 
 # Please name your code with the problem and language used.
 # Remember to also include a brief explanation of your design
@@ -25,13 +26,13 @@ input1 = [book, music, chocolate_bar]
 input2 = [chocolate_box, perfume_big]
 input3 = [perfume_med, perfume_sml, headache_pills, dark_chocolate_box]
 
-my_cart1 = ShoppingCart.new(input1)
+my_cart1 = Order.new(input1)
 my_cart1.print_receipt
 
-my_cart2 = ShoppingCart.new(input2)
+my_cart2 = Order.new(input2)
 my_cart2.print_receipt
 
-my_cart3 = ShoppingCart.new(input3)
+my_cart3 = Order.new(input3)
 my_cart3.print_receipt
 
 # input4 = [chocolate_bar, chocolate_bar, music, perfume_sml]
@@ -45,7 +46,7 @@ my_cart3.print_receipt
 #   #{quantity} #{item description} : #{quantity * (price + tax)}
 # 2. Input should not include import or exempt attributes
 # 3. "imported" would always be in the description of an imported item
-
+# 4. When you order more than one kind of item, it is scanned and counted separately
 
 
 
