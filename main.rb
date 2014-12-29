@@ -1,4 +1,9 @@
 require './item'
+require './item_food'
+require './item_medical'
+require './item_book'
+require './item_cosmetic'
+require './item_media'
 require './shopping_cart'
 
 # Please name your code with the problem and language used.

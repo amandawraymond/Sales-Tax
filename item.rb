@@ -25,7 +25,7 @@ class Item
   private 
 
     def imported?
-      @imported = true if @name.include?("imported")
+      @name.include?("imported")
     end
 
     # TODO: monkey-patch function into Number class 
@@ -34,40 +34,13 @@ class Item
     end
 end
 
-class Food < Item
-  def initialize(args)
-    super(args)
-    @exempt = true
-  end
-end
+# Another way this could be improved is set defaults + using super classes.
 
-class Medical < Item
-  def initialize(args)
-    super(args)
-    @exempt = true
-  end
-end
 
-class Book < Item
-  def initialize(args)
-    super(args)
-    @exempt = true
-  end
-end
 
-class Cosmetic < Item
-  def initialize(args)
-    super(args)
-    @exempt = false
-  end
-end
 
-class Media < Item
-  def initialize(args)
-    super(args)
-    @exempt = false
-  end
-end
+
+
 
 
 

@@ -8,7 +8,7 @@ class ShoppingCart
     print_items
     print_sales_tax
     print_grand_total
-    print_new_line
+    print_new_line  #show multiple examples separated by a line
   end  
 
   private
