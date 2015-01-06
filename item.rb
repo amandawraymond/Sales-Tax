@@ -13,7 +13,6 @@ class Item
   def orgin_tax
     0.05 if @imported
   end
-  
 end
 
 

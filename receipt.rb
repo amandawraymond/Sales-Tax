@@ -1,4 +1,5 @@
 class Receipt
+  
   def initialize(items)
     @ordered_items = items
     print_receipt
@@ -35,7 +36,7 @@ class Receipt
       "#{quantity} #{item.name}: #{price}"
     end
 
-    # separated "puts" from code to be tested
+    # separated "puts" from code in order to make testable
     def print_sales_tax
        puts sales_tax_info
     end
@@ -72,6 +73,7 @@ class Receipt
       puts "\n"
     end
 
+    # the below two functions are design oriented and not necessary
     def print_title
       puts "ThoughtWorks Receipt:"
     end
@@ -79,5 +81,4 @@ class Receipt
     def print_dashed_line
       puts "--------------------"
     end
-
 end
