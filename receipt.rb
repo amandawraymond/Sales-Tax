@@ -7,7 +7,6 @@ class Receipt
 
   def print_receipt
     print_new_line
-    print_title 
     print_dashed_line #visible line separation
     print_items
     print_dashed_line
@@ -73,11 +72,7 @@ class Receipt
       puts "\n"
     end
 
-    # the below two functions are design oriented and not necessary
-    def print_title
-      puts "ThoughtWorks Receipt:"
-    end
-
+    # the below functions are design oriented and not necessary
     def print_dashed_line
       puts "--------------------"
     end
