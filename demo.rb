@@ -6,7 +6,7 @@ require './item_types/item_book'
 require './item_types/item_cosmetic'
 require './item_types/item_media'
 require './item_types/item_other'
-require './sales_tax'g
+require './sales_tax'
 require './receipt'
 
 book                = SalesTax.new( Book.new(     name: "book",                       price: 12.49 ))
