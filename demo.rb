@@ -1,14 +1,13 @@
 require './item'
 require './item_decorator'
-require './item_food'
-require './item_medical'
-require './item_book'
-require './item_cosmetic'
-require './item_media'
-require './item_other'
-require './sales_tax'
+require './item_types/item_food'
+require './item_types/item_medical'
+require './item_types/item_book'
+require './item_types/item_cosmetic'
+require './item_types/item_media'
+require './item_types/item_other'
+require './sales_tax'g
 require './receipt'
-
 
 book                = SalesTax.new( Book.new(     name: "book",                       price: 12.49 ))
 music               = SalesTax.new( Media.new(    name: "music CD",                   price: 14.99 ))
